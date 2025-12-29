@@ -1,0 +1,8 @@
+{
+  "name": "Copy of ALZCARE - Alzheimer's Disease Detection & Progress Tracker",
+  "description": "A comprehensive medical application using CNN for MRI classification and Gemini AI for patient support, designed for Alzheimer's stage detection and patient progress tracking.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
