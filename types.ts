@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export enum AlzheimerStage {
@@ -9,6 +8,7 @@ export enum AlzheimerStage {
 }
 
 export type UserRole = 'ADMIN' | 'CLINICIAN';
+export type ViewMode = 'DOCTOR' | 'CARETAKER';
 
 export interface User {
   id: string;

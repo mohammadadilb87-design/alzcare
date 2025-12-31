@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -8,10 +7,12 @@ import About from './pages/About';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import AdminDashboard from './pages/AdminDashboard';
+import SplashScreen from './components/SplashScreen';
 import ChatWidget from './components/ChatWidget';
 import { User as UserType } from './types';
 
 const App: React.FC = () => {
+  const [showSplash, setShowSplash] = useState(true);
   const [isRegisteredView, setIsRegisteredView] = useState(false);
   const [currentUser, setCurrentUser] = useState<UserType | null>(() => {
     const saved = localStorage.getItem('alzcare_user');
@@ -53,6 +54,10 @@ const App: React.FC = () => {
         return <Detection />;
     }
   };
+
+  if (showSplash) {
+    return <SplashScreen onFinish={() => setShowSplash(false)} />;
+  }
 
   if (isRegisteredView) {
     return <Register onBack={() => setIsRegisteredView(false)} />;
